@@ -50,6 +50,13 @@ let isWithdrawal
 let accountName = prompt('who are you? ').toUpperCase()
 console.log("USER : ",accountName)
 
+const checkAccountName = () => {
+    if(accountName === ""){
+        accountName = "MYSTERY PERSON"
+    }
+}
+checkAccountName()
+
 // setting username second sceeen
 if(accountName === ""){
     userName.innerText = "MYSTERY PERSON"
@@ -165,7 +172,8 @@ console.log("pin code is:",code)
 
 // pin number reminder
 //  tyring to delay
-// setTimeout( alert(`Hey, ${accountName}! Remember, you set your pin to the last 4 digits of your card so you wouldn't forget! *whispers* ${code}`), false )
+
+alert(`Hey, ${accountName}! Remember, you set your pin to the last 4 digits of your card so you wouldn't forget! *whispers* ${code}`)
 
 
 
@@ -376,8 +384,8 @@ const updateBalance = () => {
     }
 
     if(balance < 0){
-        ssBalance.innerHTML = `BALANCE: <span class="balanceDisplay red">$${balance}</span>`
+        ssBalance.innerHTML = `BALANCE: <span class="balanceDisplay red">$${balance}.00</span>`
     } else {
-        ssBalance.innerHTML = `BALANCE: <span class="balanceDisplay green">$${balance}</span>`
+        ssBalance.innerHTML = `BALANCE: <span class="balanceDisplay green">$${balance}.00</span>`
     }
 }
