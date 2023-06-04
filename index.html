@@ -17,7 +17,7 @@
 <body>
     
     <!-- ATM -->
-    <h1>ATM RETRO</h1>
+    <h1>ATM</h1>
 
     <!-- machine container -->
     <div class="machineContainer">
@@ -26,7 +26,7 @@
             <!-- main screen Container -->
             <div class="mainScreenContainer ">
                 <!-- msTitle -->
-                <h2 class="msTitle"><span>ENTER</span> <br> PIN CODE</h2>
+                <h2 class="msTitle"><span>ENTER</span> <br> PIN CODE:</h2>
                 <!-- code container -->
                 <div class="msCodeContainer">
                     <p class="msCode" ></p>
@@ -49,8 +49,9 @@
                         <p class="withdrawalPrompt prompt hidden">ENTER WITHDRAWAL AMOUNT:</p>
                     </div>
                 </div>
-
-                <p class="numberContainer"></p>
+                <div class="numberParagraphContainer">
+                    <p class="numberContainer"></p>
+                </div>
                 <div class="optionsContainer">
                     <button class="balance" onclick="displayBalance()">CHECK <br> BALANCE</button>
                     <button class="deposit" onclick="deposit()">DEPOSIT</button>
@@ -95,16 +96,16 @@
                 <!-- card container -->
                 <div class="cardInsert">
                     <div class="">
-                        <p>⇧⬆ INSERT CARD ⬆⇧ </p>
+                        <p>⬆ <span>INSERT CARD</span> ⬆</p>
                     </div>
                 </div>
                 <div class="cardContainer">
                     <div class="cardContent">
-                        <p class="cardName">Jenna Coulter</p>
-                        <p class="cardNumber">1234 4567 7890 1010</p>
+                        <p class="cardName"></p>
+                        <p class="cardNumber"></p>
                         <div class="expCvc">
-                            <p class="expNumber">6/19</p>
-                            <p class="cvcNumber">777</p>
+                            <p class="expNumber"><span class="vt"></span></p>
+                            <p class="cvcNumber"><span class="cvc"></span></p>
                         </div>
                     </div>
                 </div>

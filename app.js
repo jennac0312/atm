@@ -1,6 +1,8 @@
 //keypad numbers
 const keys = document.querySelectorAll('.keypadContainer button')
 console.log(keys)
+const cancelKey = document.querySelector('.cancel')
+const enterKey = document.querySelector('.enter')
 
 //main screen
 const msContainer = document.querySelector('.mainScreenContainer')
@@ -30,6 +32,7 @@ const pCardNumber = document.querySelector('.cardNumber')
 console.log(pCardNumber)
 const pCvcNumber = document.querySelector('.cvcNumber')
 console.log(pCvcNumber)
+const expDate = document.querySelector('.expNumber')
 
 
 // to populate card
@@ -39,22 +42,66 @@ const cvc = []
 const expirationDate = []
 
 //check if deposit is clicked
-let isSecondScreen
+let isSecondScreen = false
 let isDeposit
 let isWithdrawal
+
+// prompt to get card name
+let accountName = prompt('who are you? ').toUpperCase()
+console.log("USER : ",accountName)
+
+// setting username second sceeen
+if(accountName === ""){
+    userName.innerText = "MYSTERY PERSON"
+} else{
+    userName.innerText = accountName
+}
+
 
 
 // random starting balance from 1-1,000,000
 let balance = Math.floor( Math.random() * 1000000)
 console.log("current balance is:",balance)
 // populate current balance
-ssBalanceDisplay.innerText = `$${balance}.00`
+if(balance >= 0){
+    ssBalance.innerHTML = `BALANCE: <span class="balanceDisplay green">$${balance}.00</span>`
+} else if(balance < 0){
+    ssBalance.innerHTML = `<span class="balanceDisplay red">$${balance}.00</span>`
+}
 
 // generate random number 1-9
 const randomSingleNumber = () => {
     let number = Math.floor(Math.random() * 10)
     return number
 }
+
+//set card info
+const setCard = () => {
+    // set card Name
+    if(accountName === ""){
+        pCardName.innerText = "MYSTERY PERSON"
+    } else{
+        pCardName.innerText = accountName
+    }
+
+    // set exp date
+    let date = new Date()
+    console.log(date)
+    let month = date.getMonth()
+    console.log("month is: ",month)
+    let year = date.getFullYear()
+    console.log("year is:", year)
+    let lastTwoYear = String(year).slice(-2)
+    console.log(lastTwoYear)
+
+    // lastTwoYear is a string so + shorthand Number() conversion :)
+    let expiration = month + "/" + ( +lastTwoYear + randomSingleNumber())
+    console.log("expiration date:", expiration)
+
+    expDate.innerHTML = `<span class="vt">Valid Thru </span> ${expiration}`
+}
+// run on pageload
+setCard()
 
 
 // generate specific number of numbers []
@@ -107,7 +154,7 @@ getNumbers(4)
 
 console.log("card number is:",separateCardNumbers())
 pCardNumber.innerText = cardNumber.join('')
-pCvcNumber.innerText = cvc.join('')
+pCvcNumber.innerHTML = `<span class="cvc">CVC</span> ${cvc.join('')}`
 
 
 // console.log(numberList.splice(12).join(''))
@@ -116,10 +163,10 @@ const code = numberList.splice(-4).join('')
 console.log("pin code is:",code)
 
 
+// pin number reminder
+//  tyring to delay
+// setTimeout( alert(`Hey, ${accountName}! Remember, you set your pin to the last 4 digits of your card so you wouldn't forget! *whispers* ${code}`), false )
 
-//trying to delay alert
-// document.onload = setTimeout(1000000000000000000, alert(`PIN CODE is last 4 card numbers: ${code}`))
-// alert(`PIN CODE is last 4 card numbers: ${code}`)
 
 
 // populate screen with pin
@@ -137,6 +184,8 @@ const depositWithdrawal = (key) => {
     console.log(ssNumberContainer)
 }
 
+
+// set isDeposit boolean
 depositButton.addEventListener('click', () => {
     if(depositPrompt.classList.value.includes('hidden')){
         isDeposit = false
@@ -147,6 +196,8 @@ depositButton.addEventListener('click', () => {
     console.log("DEPOSIT EVENT LISTENER",isDeposit)
 })
 
+
+//set isWithdrawal boolean
 withdrawalButton.addEventListener('click', () => {
     if(withdrawalPrompt.classList.value.includes('hidden')){
         isWithdrawal = false
@@ -178,9 +229,15 @@ keys.forEach((key) => {
                 keyNumber = key.innerText
                 depositWithdrawal(keyNumber)
             }
-        } else{
-            keyNumber = key.innerText
-            displayPin(keyNumber)
+
+        } else if(!isSecondScreen){
+            if(key.innerText === "✔"){
+                verifyPin()
+            }else{
+                console.log("KEY IS:", key.innerHTML)
+                keyNumber = key.innerText
+                displayPin(keyNumber)
+            }
         }
 
         // check to see if number key is clicked or x/check
@@ -230,9 +287,25 @@ const verifyPin = () => {
         toggleHidden(msContainer,ssContainer)
         isSecondScreen = !ssContainer.classList.value.includes('.hidden')
     } else{
+        alert("INCORRECT PIN")
+        clearPin()
         console.log("INCORRECT PIN CODE")
     }
 }
+
+
+enterKey.addEventListener('click', () => {
+    if(!isSecondScreen){
+        console.log(isSecondScreen)
+        verifyPin()
+    }
+})
+
+cancelKey.addEventListener('click', () => {
+    if(!isSecondScreen){
+        clearPin()
+    }
+})
 
 
 // hide screen
@@ -242,8 +315,6 @@ const toggleHidden = (hide, show) => {
 }
 
 
-// prompt to give card name
-// prompt('who are you? ')
 
 // display balance
 const displayBalance = () => {
@@ -302,7 +373,11 @@ const updateBalance = () => {
     } else if(isWithdrawal){
         balance -= Number(number)
         console.log(`NEW balance is ${balance} after subtracting withdrawal`)
-
     }
-    ssBalanceDisplay.innerText = `$${balance}`
+
+    if(balance < 0){
+        ssBalance.innerHTML = `BALANCE: <span class="balanceDisplay red">$${balance}</span>`
+    } else {
+        ssBalance.innerHTML = `BALANCE: <span class="balanceDisplay green">$${balance}</span>`
+    }
 }

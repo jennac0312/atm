@@ -7,18 +7,20 @@
 }
 
 body{
-    height: 100vh;
-    /* background-image: url("https://64.media.tumblr.com/23dba117a36f079bccdb8aa8c63b84fa/tumblr_pwlczvnsKF1rwdf4uo1_640.gif"); */
+    height: 100%;
+    background-image: url("https://media.tenor.com/pCd-39uhMpMAAAAC/rain-totoro.gif");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 h1{
     text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    color: black
 }
 
 .machineContainer{
-    border: 4px solid rgb(26, 24, 24);
+    border: 10px solid rgb(24, 22, 20);
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
     /* border-bottom: none; */
@@ -26,25 +28,27 @@ h1{
     height: 750px;
     width: 700px;
     margin: auto;
-    padding-top: 50px;
+    padding-top: 30px;
     background-color: rgb(87, 82, 77);
-    box-shadow: -10px 5px 40px rgb(53, 53, 53);
+    box-shadow: -10px 10px 100px black;
+    /* margin-top: 50px; */
 }
 
 .screenContainer{
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     height: 50%;
     width: 70%;
     margin: 20px auto;
     /* padding: 20px; */
-    border: 10px solid rgb(58, 56, 56);
+    border: 10px double rgb(10, 12, 14);
+    /* border-style: double; */
     border-radius: 20px;
     background-color: rgb(39, 118, 182);
-
+    box-shadow: 10px -10px 50px rgb(39, 118, 182);
 }
 
 .mainScreenContainer{
-    border: 2px solid yellowgreen;
+    /* border: 2px solid yellowgreen; */
     text-align: center;
     height: 80%;
     width: 80%;
@@ -53,10 +57,13 @@ h1{
 }
 
 .msTitle{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     font-size: 2em;
     margin: 10px auto;
     /* margin-bottom: 0;  */
+    color: rgba(211, 211, 211, .6);
+    text-shadow: 3px 3px rgba(54, 50, 50, 0.7);
+    
 }
 
 .msTitle span {
@@ -81,11 +88,13 @@ h1{
     background-color: rgb(60, 135, 197);
     padding-top: 6px;
     border-radius: 10px;
-    color: lightgray
+    color: lightgray;
+    border: 2px solid rgb(4, 4, 80);
+    box-shadow: -2px 2px 15px rgb(4, 4, 80);
 }
 
 .msButtonsContainer{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
@@ -99,19 +108,22 @@ h1{
     font-size: 1em;
     text-align: center;
     font-weight: bolder;
-    color: lightgrey;
+    color: rgba(211, 211, 211, .6);
+    box-shadow: -2px 2px 15px rgb(4, 4, 80);
     border: 2px solid rgb(36, 104, 160);
     border-radius: 10px;
     /* border: none; */
     display: flex;
     justify-content: center;
+    box-shadow: -2px 2px 15px rgb(4, 4, 80);
 }
 
 .msButtonsContainer button:hover{
     background-color: rgb(36, 104, 160);
     border: 1px solid rgb(60, 135, 197);
     cursor: pointer;
-    color: rgb(48, 47, 47)
+    color: rgb(48, 47, 47);
+    box-shadow: -2px 2px 5px rgb(4, 4, 80);
 }
 
 .msCancel{
@@ -125,7 +137,7 @@ h1{
 
 /* BOTTOM */
 .bottomContainer{
-    border: 2px solid gray;
+    /* border: 2px solid gray; */
     height: 300px;
     display: flex;
     justify-content: space-around;
@@ -133,17 +145,18 @@ h1{
 
 .bottomContainer > div {
     width: 40%;
-    border: 2px solid green;
+    /* border: 2px solid green; */
 }
 
 .keypadContainer{
-    border: 2px solid rgb(145, 143, 140);
+    border: 2px solid rgb(145, 143, 140); /* keep */
     border-radius: 10px;
     height: 95%;
     width: 80%;
     text-align: center;
     margin: auto;
     background-color: rgb(145, 143, 140);
+    box-shadow: -5px 15px 50px black;
 }
 
 .keypadContainer button {
@@ -154,13 +167,14 @@ h1{
     font-size: 1.5em;
     border-radius: 5px;
     border-color: gray;
+    box-shadow: 5px 5px 2px black;
 }
 
 .keypadContainer button:hover {
     background-color: rgb(170, 170, 170);
     border: 2px solid gray;
     cursor: pointer;
-
+    box-shadow: 3px 3px 2px black;
 }
 
 .keypadContainer .row1 {
@@ -172,25 +186,71 @@ h1{
     justify-content: center;
 }
 
+/* symbol keys */
+.symbol{
+    color: rgba(255, 255, 255, 0.6);
+}
+.symbol:hover{
+    /* color: rgb(170, 170, 170, .7); */
+    /* color: rgba(39, 39, 39, 0.9) */
+    color: rgba(0, 0, 0, .99);
+}
+.symbol.enter{
+    background-color: green;
+    border-color: darkgreen;
+}
+.symbol.enter:hover{
+    background-color: darkgreen;
+    border-color: rgb(1, 83, 1);
+}
+.symbol.cancel{
+    background-color: rgb(170, 5, 5);
+    border-color: darkred;
+}
+.symbol.cancel:hover{
+    background-color: darkred;
+    border-color: rgb(99, 0, 0);
+}
+
 .cardInsert {
-    border: 6px solid black;
+    border: 2px solid rgb(58, 173, 5);
     border-radius: 20px;
     height: 10px;
     margin-top: 15px;
-    background-color: rgb(145, 143, 143);
+    background-color: rgb(0, 0, 0);
+    box-shadow: -2px 2px 15px rgb(0, 0, 0);
+}
+
+.cardInsert div {
+    /* border: 2px solid red; */
+    text-align: center;
+}
+
+.cardInsert p span {
+    text-align: center;
+    padding-top: 8px;
+    font-size: 10px;
+    /* background-color: white; */
+    font-family: sans-serif;
+    color: rgba(233, 124, 0, 0.5);
+    font-weight: bolder;
+    /* text-decoration-line: underline; */
+    text-decoration-color:  rgba(233, 124, 0, 0.2);
+    text-decoration-thickness: 2px;
+    width: max-content;
+    height: 15px;
+    margin: 10px auto;
 }
 
 .cardInsert p {
-    text-align: center;
-    padding-top: 4px;
-    font-size: 14px;
-    background-color: white;
+    color: rgba(233, 124, 0, 0.5);
 }
 
+
 .cardContainer{
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     border-radius: 10px;
-    background-color: lightgreen;
+    background-color: rgb(1, 0, 75);
     /* rotate: 90deg; */
     height: 150px;
     width: 300px;
@@ -201,21 +261,35 @@ h1{
 }
 
 .cardContent{
-    border: 2px solid yellowgreen;
+    /* border: 2px solid yellowgreen; */
     margin-left: 12px;
     border-radius: 10px;
+    margin-top: 5px;
+    position: absolute;
+    color: rgba(245, 245, 245, 0.9)
+}
+
+.cardNumber{
+    font-weight: bolder;
 }
 
 .expCvc{
     display: flex;
-    justify-content: space-evenly;
-    margin-right: 5px;
+    justify-content: space-between;
+    /* margin-right: 2px; */
+}
+
+.vt, .cvc{
+    font-size: .6em;
+}
+
+.cvcNumber{
 }
 
 /* second screen */
 
 .secondScreenContainer{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -246,7 +320,7 @@ h1{
 }
 
 .infoContainer{
-    border: 2px solid green;
+    /* border: 2px solid green; */
     /* margin: auto; */
     margin-top: -80px;
     height: 220px;
@@ -282,15 +356,28 @@ h1{
     /* border: 2px solid purple; */
     font-weight: bold;
     color: rgba(173, 172, 172, 50%);    
+    /* width: 50%; */
+    margin: auto;
+    margin-bottom: 25px;
 }
 
 .prompt{
     /* border: 2px solid yellow; */
 }
 
+.numberParagraphContainer{
+    width: 50%;
+    position: absolute;
+    margin-left: 35px;
+    /* margin: 0 auto; */
 
+}
 .numberContainer{
+    /* border: 2px solid yellow; */
     color: rgba(253, 253, 253, 0.5);
+    /* width: inherit; */
+    /* margin: auto; */
+    /* display: none; */
 }
 
 .optionsContainer{
@@ -330,7 +417,37 @@ h1{
     position: absolute;
 }
 
+
+
 /* hide */
 .hidden {
     display: none;
+}
+
+/* red font overdraft */
+.red {
+    color: rgb(212, 27, 27)
+}
+/* green font good */
+.green{
+    color: greenyellow
+}
+
+/*  when half screen ... keey full background image*/
+@media only screen and (max-width: 1000px ){
+    body{
+        height: 100vh;
+        background-image: url("https://media.tenor.com/pCd-39uhMpMAAAAC/rain-totoro.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+/* when 1/4 screen... keep full background image */
+@media only screen and (max-height: 500px ){
+    body{
+        height: 100%;
+        background-image: url("https://media.tenor.com/pCd-39uhMpMAAAAC/rain-totoro.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
