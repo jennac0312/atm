@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ATM</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Turret+Road:wght@200;400&family=VT323&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- ATM -->
+    <h1>ATM RETRO</h1>
+
+    <!-- machine container -->
+    <div class="machineContainer">
+        <!-- screen container -->
+        <div class="screenContainer">
+            <!-- main screen Container -->
+            <div class="mainScreenContainer ">
+                <!-- msTitle -->
+                <h2 class="msTitle"><span>ENTER</span> <br> PIN CODE</h2>
+                <!-- code container -->
+                <div class="msCodeContainer">
+                    <p class="msCode" ></p>
+                </div>
+                <!-- ms Button Container -->
+                <div class="msButtonsContainer">
+                    <button class="msCancel" onclick="clearPin()">CANCEL</button>
+                    <button class="msEnter" onclick="verifyPin()">ENTER</button>
+                </div>
+            </div>
+
+            <div class="secondScreenContainer hidden">
+                <h3>USER: <span class="userName">Jenna Coulter</span></h3>
+                <h4 class="ssStarter hidden">MAKE SELECTION</h4>
+                <!-- hidden -->
+                <div class="infoContainer ">
+                    <p class="currentBalance hidden"> BALANCE: <span class="balanceDisplay">26826</span></p>
+                    <div class="switchPrompts">
+                        <p class="depositPrompt prompt hidden">ENTER DEPOSIT AMOUNT:</p>
+                        <p class="withdrawalPrompt prompt hidden">ENTER WITHDRAWAL AMOUNT:</p>
+                    </div>
+                </div>
+
+                <p class="numberContainer"></p>
+                <div class="optionsContainer">
+                    <button class="balance" onclick="displayBalance()">CHECK <br> BALANCE</button>
+                    <button class="deposit" onclick="deposit()">DEPOSIT</button>
+                    <button class="withdrawal" onclick="withdrawal()">WITHDRAWAL</button>
+                </div>
+
+            </div>
+            <!-- other screens -->
+        </div>        
+        <!-- bottom container -->
+        <div class="bottomContainer">
+            <!-- left container -->
+            <!-- <div class="leftContainer"></div> -->
+            <!-- middle container -->
+            <div class="middleContainer">
+                <!-- keypad container -->
+                <div class="keypadContainer">
+                    <div class="row1">
+                        <button class="1 ">1</button>
+                        <button class="2 ">2</button>
+                        <button class="3 ">3</button>
+                    </div>
+                    <div class="row2">
+                        <button class="4 ">4</button>
+                        <button class="5 ">5</button>
+                        <button class="6 ">6</button>
+                    </div>
+                    <div class="row3">
+                        <button class="7 ">7</button>
+                        <button class="8 ">8</button>
+                        <button class="9 ">9</button>
+                    </div>
+                    <div class="row4">
+                        <button class="symbol enter">✔</button>
+                        <button class="0">0</button>
+                        <button class="symbol cancel">✖</button>
+                    </div>
+                </div>
+            </div>
+            <!-- right container -->
+            <div class="rightContainer">
+                <!-- card container -->
+                <div class="cardInsert">
+                    <div class="">
+                        <p>⇧⬆ INSERT CARD ⬆⇧ </p>
+                    </div>
+                </div>
+                <div class="cardContainer">
+                    <div class="cardContent">
+                        <p class="cardName">Jenna Coulter</p>
+                        <p class="cardNumber">1234 4567 7890 1010</p>
+                        <div class="expCvc">
+                            <p class="expNumber">6/19</p>
+                            <p class="cvcNumber">777</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>    
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

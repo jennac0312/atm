@@ -1,0 +1,336 @@
+*{
+    font-family: 'Turret Road', cursive;
+    /* font-family: 'Press Start 2P', cursive; */
+    /* font-family: 'VT323', monospace; */
+    letter-spacing: .2em;
+    /* font-weight: bolder; */
+}
+
+body{
+    height: 100vh;
+    /* background-image: url("https://64.media.tumblr.com/23dba117a36f079bccdb8aa8c63b84fa/tumblr_pwlczvnsKF1rwdf4uo1_640.gif"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    text-align: center;
+}
+
+.machineContainer{
+    border: 4px solid rgb(26, 24, 24);
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    /* border-bottom: none; */
+    border-radius: 25px;
+    height: 750px;
+    width: 700px;
+    margin: auto;
+    padding-top: 50px;
+    background-color: rgb(87, 82, 77);
+    box-shadow: -10px 5px 40px rgb(53, 53, 53);
+}
+
+.screenContainer{
+    border: 2px solid orange;
+    height: 50%;
+    width: 70%;
+    margin: 20px auto;
+    /* padding: 20px; */
+    border: 10px solid rgb(58, 56, 56);
+    border-radius: 20px;
+    background-color: rgb(39, 118, 182);
+
+}
+
+.mainScreenContainer{
+    border: 2px solid yellowgreen;
+    text-align: center;
+    height: 80%;
+    width: 80%;
+    margin: 30px auto;
+    border-radius: 20px;
+}
+
+.msTitle{
+    border: 2px solid black;
+    font-size: 2em;
+    margin: 10px auto;
+    /* margin-bottom: 0;  */
+}
+
+.msTitle span {
+    font-size: 1.5em;
+    font-weight: bolder;
+    letter-spacing: .25em;
+}
+
+.msCodeContainer{
+    /* border: 2px solid red; */
+    margin: 0 auto 10px auto;
+    width: 75%;
+}
+
+.msCode, .numberContainer{
+    border: none;
+    height: 40px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 2em;
+    background-color: rgb(60, 135, 197);
+    padding-top: 6px;
+    border-radius: 10px;
+    color: lightgray
+}
+
+.msButtonsContainer{
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.msButtonsContainer button {
+    padding: 1.25em;
+    width: 30%;
+    margin: auto;
+    background-color: rgb(60, 135, 197);
+    font-size: 1em;
+    text-align: center;
+    font-weight: bolder;
+    color: lightgrey;
+    border: 2px solid rgb(36, 104, 160);
+    border-radius: 10px;
+    /* border: none; */
+    display: flex;
+    justify-content: center;
+}
+
+.msButtonsContainer button:hover{
+    background-color: rgb(36, 104, 160);
+    border: 1px solid rgb(60, 135, 197);
+    cursor: pointer;
+    color: rgb(48, 47, 47)
+}
+
+.msCancel{
+    text-align: center;
+    margin-right: 2px;
+}
+
+.msEnter{
+    text-align: center;
+}
+
+/* BOTTOM */
+.bottomContainer{
+    border: 2px solid gray;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bottomContainer > div {
+    width: 40%;
+    border: 2px solid green;
+}
+
+.keypadContainer{
+    border: 2px solid rgb(145, 143, 140);
+    border-radius: 10px;
+    height: 95%;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    background-color: rgb(145, 143, 140);
+}
+
+.keypadContainer button {
+    height: 50px;
+    width: 50px;
+    margin: 4px;
+    font-weight: bolder;
+    font-size: 1.5em;
+    border-radius: 5px;
+    border-color: gray;
+}
+
+.keypadContainer button:hover {
+    background-color: rgb(170, 170, 170);
+    border: 2px solid gray;
+    cursor: pointer;
+
+}
+
+.keypadContainer .row1 {
+    margin-top: 20px;
+}
+
+.row1, .row2, .row3, .row4{
+    display: flex;
+    justify-content: center;
+}
+
+.cardInsert {
+    border: 6px solid black;
+    border-radius: 20px;
+    height: 10px;
+    margin-top: 15px;
+    background-color: rgb(145, 143, 143);
+}
+
+.cardInsert p {
+    text-align: center;
+    padding-top: 4px;
+    font-size: 14px;
+    background-color: white;
+}
+
+.cardContainer{
+    border: 2px solid purple;
+    border-radius: 10px;
+    background-color: lightgreen;
+    /* rotate: 90deg; */
+    height: 150px;
+    width: 300px;
+    margin-top: 50px;
+    margin-left: -10px;
+    font-weight: bolder;
+    box-shadow: -5px 5px 20px 5px black;
+}
+
+.cardContent{
+    border: 2px solid yellowgreen;
+    margin-left: 12px;
+    border-radius: 10px;
+}
+
+.expCvc{
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 5px;
+}
+
+/* second screen */
+
+.secondScreenContainer{
+    border: 2px solid red;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.secondScreenContainer h3{
+    /* margin-top: auto; */
+    margin-top: 30px;
+    width: 90%;
+    text-align: center;
+    font-size: 1.5em;
+    color: rgba(173, 172, 172, 50%);
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.secondScreenContainer h4{
+    text-align: center;
+    border: 2px solid saddlebrown;
+    margin:auto;
+    font-size: 2em;
+    color: rgba(173, 172, 172, 30%);
+    width: 100%;
+    margin-top: 50px;
+
+}
+
+.infoContainer{
+    border: 2px solid green;
+    /* margin: auto; */
+    margin-top: -80px;
+    height: 220px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    /* justify-self: flex-end; */
+}
+
+.currentBalance{
+    text-align: center;
+    margin-bottom: ;
+    /* border: 2px solid purple; */
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgba(173, 172, 172, 50%);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.switchPrompts{
+    /* border: 2px solid brown; */
+    justify-content: flex-end;
+}
+
+.secondScreenContainer .prompt {
+    text-align: center;
+    font-size: 1.1em;
+    /* transform: scaleY(1);  very interesting..stretches text vertically */
+    /* border: 2px solid purple; */
+    font-weight: bold;
+    color: rgba(173, 172, 172, 50%);    
+}
+
+.prompt{
+    /* border: 2px solid yellow; */
+}
+
+
+.numberContainer{
+    color: rgba(253, 253, 253, 0.5);
+}
+
+.optionsContainer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+
+.optionsContainer button {
+    width: 30%;
+    height: 50px;
+    border-radius: 10px;
+    /* padding: 1.25em; */
+    /* width: 30%; */
+    /* margin: auto; */
+    background-color: rgb(60, 135, 197);
+    font-size: .9em;
+    /* text-align: center; */
+    font-weight: bolder;
+    color: rgba(211,211,211,70%);
+    border: 2px solid rgb(36, 104, 160);
+    /* border-radius: 10px; */
+    /* border: none; */
+}
+
+.optionsContainer button:hover {
+    background-color: rgb(36, 104, 160);
+    border: 1px solid rgb(60, 135, 197);
+    cursor: pointer;
+    color: rgb(48, 47, 47)
+}
+
+.numberContainer{
+    margin-top: 250px;
+    margin-left: 18px;
+    width: 80%;
+    position: absolute;
+}
+
+/* hide */
+.hidden {
+    display: none;
+}
