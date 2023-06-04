@@ -47,7 +47,7 @@ let isDeposit
 let isWithdrawal
 
 // prompt to get card name
-let accountName = prompt('who are you? ').toUpperCase()
+let accountName = prompt('enter username').toUpperCase()
 console.log("USER : ",accountName)
 
 const checkAccountName = () => {
