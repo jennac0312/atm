@@ -24,7 +24,9 @@ console.log(ssNumberContainer)
 const checkBalanceButton = document.querySelector('.balance')
 const depositButton = document.querySelector('.deposit')
 const withdrawalButton = document.querySelector('.withdrawal')
-
+// all ss buttuons
+const ssButtons = document.querySelectorAll('.optionsContainer button')
+console.log(ssButtons)
 // card dom variables
 const pCardName = document.querySelector('.cardName')
 console.log(pCardName)
@@ -173,7 +175,7 @@ console.log("pin code is:",code)
 // pin number reminder
 //  tyring to delay
 
-alert(`Hey, ${accountName}! Remember, you set your pin to the last 4 digits of your card so you wouldn't forget! *whispers* ${code}`)
+alert(`Hey, ${accountName}! Remember, you set your pin to the last 4 digits of your card so you wouldn't forget! *psssssssst* it's ${code}`)
 
 
 
@@ -389,3 +391,10 @@ const updateBalance = () => {
         ssBalance.innerHTML = `BALANCE: <span class="balanceDisplay green">$${balance}.00</span>`
     }
 }
+
+// hide "make selection"
+ssButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+        ssStarter.classList.add('hidden')
+    })
+})
