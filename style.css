@@ -64,9 +64,9 @@ h1{
     font-size: 2em;
     margin: 10px auto;
     /* margin-bottom: 0;  */
-    color: rgba(211, 211, 211, .6);
+    color: rgba(172, 172, 172, 0.6);
     text-shadow: 3px 3px rgba(54, 50, 50, 0.7);
-    
+    /* font-family: 'Press Start 2P', cursive; */
 }
 
 .msTitle span {
@@ -260,12 +260,12 @@ h1{
     background-color: rgb(1, 0, 75);
     /* rotate: 90deg; */
     height: 150px;
-    width: 290px;
+    width: 280px;
     margin-top: 50px;
     margin-left: -30px;
     font-weight: bolder;
     box-shadow: -5px 5px 20px 5px black;
-    background-color: rgb(138, 196, 105);
+    background-color: rgb(5, 72, 110);
 }
 
 .cardContent{
