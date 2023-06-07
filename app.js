@@ -49,12 +49,16 @@ let isDeposit
 let isWithdrawal
 
 // prompt to get card name
-let accountName = prompt('enter username').toUpperCase()
+let accountName = prompt('enter username')
 console.log("USER : ",accountName)
 
+// added logic that accounts for hitting cancel on prompt 
 const checkAccountName = () => {
-    if(accountName === ""){
+    if(accountName === "" || accountName === null){
         accountName = "MYSTERY PERSON"
+    }
+    else{
+        accountName = accountName.toUpperCase()
     }
 }
 checkAccountName()
