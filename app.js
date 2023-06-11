@@ -72,7 +72,7 @@ if(accountName === ""){
 
 
 
-// random starting balance from 1-1,000,000
+// random starting balance from 1-1,000,000 (..almost)
 let balance = Math.floor( Math.random() * 1000000)
 console.log("current balance is:",balance)
 // populate current balance
